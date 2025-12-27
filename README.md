@@ -92,7 +92,54 @@ AsisyaProject/
 └── README.md               # Documentación
 ```
 
-## 🐛 Solución de Problemas Comunes
+## 🏗️ Decisiones Arquitectónicas
+
+### Backend: Clean Architecture
+Se optó por una **Arquitectura Limpia** para descoplar la lógica de negocio de la infraestructura y la presentación.
+*   **Domain**: Entidades puras sin dependencias.
+*   **Application**: Casos de uso e interfaces (Abstracción).
+*   **Infrastructure**: Implementación de base de datos y servicios externos.
+*   **API**: Capa de presentación RESTful.
+
+**Por qué?** Facilita el mantenimiento, las pruebas unitarias y permite cambiar tecnologías (como la base de datos) sin afectar la lógica de negocio.
+
+### Frontend: React + Vite + TypeScript
+*   **Vite**: Por su velocidad de compilación superior a CRA.
+*   **TypeScript**: Para añadir tipado estático y reducir errores en tiempo de ejecución.
+*   **Tailwind CSS**: Para un desarrollo de UI rápido y consistente sin salir del HTML/JSX.
+*   **Client-Side Pagination**: Dada la escala del dataset de prueba (1000 items), se optó por paginación y filtrado en el cliente para mejor UX (menor latencia) y reducir llamadas al servidor.
+*   **Context API**: Se eligió sobre Redux por la simplicidad, ya que el estado global necesario (Auth) era mínimo.
+*   **Enrutamiento Modular**: Se implementó una separación clara de rutas en `AppRouter` para escalabilidad.
+
+### Infraestructura: Docker
+La aplicación está totalmente **dockerizada** para garantizar que funcione idénticamente en cualquier entorno (desarrollo, CI/CD, producción) y eliminar el problema de "en mi máquina funciona".
+
+### Base de Datos: Code-First
+Se utilizó el enfoque **Code-First** con Entity Framework Core para mantener el esquema de base de datos versionado junto con el código (Migraciones).
+
+## � Estrategias de Escalabilidad y Alto Rendimiento (Propuesta)
+
+Para soportar **altas cargas** y escalar en un entorno Cloud, la arquitectura actual evolucionaría de la siguiente manera:
+
+### 1. Optimización de Carga Masiva (High Load)
+Actualmente, la carga masiva es síncrona. Para millones de registros, implementaría:
+*   **Procesamiento Asíncrono:** El endpoint `/bulk` solo recibiría el archivo y respondería `202 Accepted`.
+*   **Message Queue (RabbitMQ / Azure Service Bus):** Se enviaría un mensaje a una cola con la ruta del archivo.
+*   **Background Workers:** Servicios dedicados (Workers) leerían de la cola y procesarían los registros en segundo plano.
+*   **Batch Inserts:** Uso de `EF Core Bulk Extensions` o `SqlBulkCopy` para insertar lotes de 10,000 registros en milisegundos, en lugar de uno por uno.
+
+### 2. Caché Distribuido (Redis)
+Para reducir la carga en la base de datos en operaciones de lectura frecuentes (como `GET /products`):
+*   Implementar **Redis** como caché distribuido.
+*   Patrón **Cache-Aside**: Al pedir productos, primero consultar Redis. Si no existen, ir a SQL Server, guardarlos en Redis (con TTL) y devolverlos.
+
+### 3. Escalado Horizontal (Cloud)
+Gracias a que la API es **Stateless** (no guarda sesión en memoria, usa JWT), es trivial escalar horizontalmente:
+*   **Load Balancer:** Colocar un balanceador de carga (NGINX, AWS ALB, Azure Front Door) frente a las instancias de la API.
+*   **Kubernetes / Container Instances:** Desplegar múltiples réplicas (`replicas: 5`) de los contenedores Docker del Backend.
+*   **Auto-scaling:** Configurar reglas para escalar automáticamente basado en CPU/Memoria o métricas de la cola de mensajes.
+
+## �🐛 Solución de Problemas Comunes
 
 *   **Error de Base de Datos al iniciar:** Si la BD no carga, intenta reiniciar el volumen:
     ```bash
