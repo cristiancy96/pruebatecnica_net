@@ -99,7 +99,9 @@ export default function Dashboard() {
                                 <p className="text-gray-500 text-sm mb-4 line-clamp-2">{product.description}</p>
                                 <div className="flex justify-between items-center text-sm text-gray-500">
                                     <span>Stock: {product.stock}</span>
-                                    <button className="text-indigo-600 hover:text-indigo-800 font-semibold">Ver Detalles &rarr;</button>
+                                    <Link to={`/product/${product.id}`} className="text-indigo-600 hover:text-indigo-800 font-semibold">
+                                        Ver Detalles &rarr;
+                                    </Link>
                                 </div>
                             </div>
                         </div>

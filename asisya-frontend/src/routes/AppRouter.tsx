@@ -5,6 +5,7 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Dashboard from '../pages/Dashboard';
 import Admin from '../pages/Admin';
+import ProductDetails from '../pages/ProductDetails';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
     const { user, loading } = useAuth();
@@ -23,6 +24,14 @@ export default function AppRouter() {
                 element={
                     <ProtectedRoute>
                         <Dashboard />
+                    </ProtectedRoute>
+                }
+            />
+            <Route
+                path="/product/:id"
+                element={
+                    <ProtectedRoute>
+                        <ProductDetails />
                     </ProtectedRoute>
                 }
             />
