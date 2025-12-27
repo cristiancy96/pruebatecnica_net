@@ -25,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Asisya.Application\Asisya.Application.csproj" />
     <ProjectReference Include="..\Asisya.Domain\Asisya.Domain.csproj" />
+    <ProjectReference Include="..\Asisya.Api\Asisya.Api.csproj" />
   </ItemGroup>
 
 </Project>
