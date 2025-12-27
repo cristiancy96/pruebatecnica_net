@@ -28,7 +28,7 @@ La aplicación está completamente dockerizada para facilitar su despliegue.
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone <URL_DEL_REPO>
+    git clone https://github.com/cristiancy96/pruebatecnica_net
     cd AsisyaProject
     ```
 
