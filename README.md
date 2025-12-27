@@ -149,4 +149,4 @@ Gracias a que la API es **Stateless** (no guarda sesión en memoria, usa JWT), e
 *   **Frontend no conecta con Backend:** Asegúrate de que el backend esté corriendo en el puerto `5000` y que no haya bloqueos de CORS (ya está configurado para permitir todo en este entorno).
 
 ---
-Desarrollado por [Tu Nombre / Cristian] para la prueba técnica de Asisya.
+Desarrollado por Cristian Cruz para la prueba técnica de Asisya.
