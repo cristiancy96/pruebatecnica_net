@@ -68,8 +68,12 @@ Se ha incluido un script y un archivo JSON para probar la carga masiva de 1000 p
 2.  Crear al menos una Categoría (ID 1).
 3.  Enviar el contenido de `bulk_products.json` al endpoint de bulk.
 
-### 3. Frontend Traducido
-Toda la interfaz de usuario (Login, Registro, Dashboard, Admin) ha sido traducida y adaptada al español.
+### 3. Frontend Traducido y Mejorado
+Toda la interfaz de usuario (Login, Registro, Dashboard, Admin) ha sido traducida al español.
+
+### 4. Nuevas Funcionalidades
+*   **Vista de Detalle:** Nueva página de detalle de producto (`/product/:id`) con imágenes dinámicas de alta calidad (Unsplash) basadas en la categoría del producto.
+*   **Gestión de Inventario:** Capacidad para **Editar** y **Eliminar** productos directamente desde el panel de administración, con validaciones de seguridad.
 
 ## 📁 Estructura del Proyecto
 
