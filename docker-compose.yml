@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./Asisya.Backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=db;Database=AsisyaDb;User Id=sa;Password=Your_password123;TrustServerCertificate=True;
+      - Jwt__Key=ThisIsASuperSecretKeyForAsisyaProjectTest123!
+      - ASPNETCORE_HTTP_PORTS=8080
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./asisya-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Your_password123
+    ports:
+      - "1433:1433"

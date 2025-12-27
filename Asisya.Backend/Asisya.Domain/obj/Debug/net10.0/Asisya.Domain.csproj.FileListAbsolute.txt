@@ -1,0 +1,11 @@
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Domain\bin\Debug\net10.0\Asisya.Domain.deps.json
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Domain\bin\Debug\net10.0\Asisya.Domain.dll
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Domain\bin\Debug\net10.0\Asisya.Domain.pdb
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Domain\obj\Debug\net10.0\Asisya.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Domain\obj\Debug\net10.0\Asisya.Domain.AssemblyInfoInputs.cache
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Domain\obj\Debug\net10.0\Asisya.Domain.AssemblyInfo.cs
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Domain\obj\Debug\net10.0\Asisya.Domain.csproj.CoreCompileInputs.cache
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Domain\obj\Debug\net10.0\Asisya.Domain.dll
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Domain\obj\Debug\net10.0\refint\Asisya.Domain.dll
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Domain\obj\Debug\net10.0\Asisya.Domain.pdb
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Domain\obj\Debug\net10.0\ref\Asisya.Domain.dll

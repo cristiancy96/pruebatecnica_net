@@ -1,0 +1,15 @@
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\obj\Debug\net10.0\Asisya.Application.csproj.AssemblyReference.cache
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\obj\Debug\net10.0\Asisya.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\obj\Debug\net10.0\Asisya.Application.AssemblyInfoInputs.cache
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\obj\Debug\net10.0\Asisya.Application.AssemblyInfo.cs
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\obj\Debug\net10.0\Asisya.Application.csproj.CoreCompileInputs.cache
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\bin\Debug\net10.0\Asisya.Application.deps.json
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\bin\Debug\net10.0\Asisya.Application.dll
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\bin\Debug\net10.0\Asisya.Application.pdb
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\bin\Debug\net10.0\Asisya.Domain.dll
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\bin\Debug\net10.0\Asisya.Domain.pdb
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\obj\Debug\net10.0\Asisya.A.97D99C0A.Up2Date
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\obj\Debug\net10.0\Asisya.Application.dll
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\obj\Debug\net10.0\refint\Asisya.Application.dll
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\obj\Debug\net10.0\Asisya.Application.pdb
+C:\Users\crist\Desktop\PROYECTOS\finanzauto\AsisyaProject\Asisya.Backend\Asisya.Application\obj\Debug\net10.0\ref\Asisya.Application.dll
